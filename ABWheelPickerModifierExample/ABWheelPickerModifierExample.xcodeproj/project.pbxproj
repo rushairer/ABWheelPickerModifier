@@ -1,0 +1,840 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C72292F92549331A00A668D7 /* ABWheelPickerModifierExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72292E62549331800A668D7 /* ABWheelPickerModifierExampleApp.swift */; };
+		C72292FA2549331A00A668D7 /* ABWheelPickerModifierExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72292E62549331800A668D7 /* ABWheelPickerModifierExampleApp.swift */; };
+		C72292FB2549331A00A668D7 /* WheelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72292E72549331800A668D7 /* WheelPickerView.swift */; };
+		C72292FC2549331A00A668D7 /* WheelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72292E72549331800A668D7 /* WheelPickerView.swift */; };
+		C72292FD2549331A00A668D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72292E82549331900A668D7 /* Assets.xcassets */; };
+		C72292FE2549331A00A668D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72292E82549331900A668D7 /* Assets.xcassets */; };
+		C7239D38254962F900F5101D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7239D37254962F900F5101D /* Assets.xcassets */; };
+		C7239D3F254962F900F5101D /* ABWheelPickerModifierExample (watchOS Extension).appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C7239D3E254962F900F5101D /* ABWheelPickerModifierExample (watchOS Extension).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C7239D44254962F900F5101D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7239D43254962F900F5101D /* ContentView.swift */; };
+		C7239D46254962F900F5101D /* ABWheelPickerModifierExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7239D45254962F900F5101D /* ABWheelPickerModifierExampleApp.swift */; };
+		C7239D48254962F900F5101D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7239D47254962F900F5101D /* ComplicationController.swift */; };
+		C7239D4A254962FA00F5101D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7239D49254962FA00F5101D /* Assets.xcassets */; };
+		C7239D4D254962FA00F5101D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7239D4C254962FA00F5101D /* Preview Assets.xcassets */; };
+		C7239D51254962FA00F5101D /* ABWheelPickerModifierExample (watchOS).app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C7239D35254962F700F5101D /* ABWheelPickerModifierExample (watchOS).app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C7239D622549634900F5101D /* WheelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72292E72549331800A668D7 /* WheelPickerView.swift */; };
+		C76EEE652549B68100DB16A3 /* ABWheelPickerModifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76EEE642549B68100DB16A3 /* ABWheelPickerModifier.framework */; };
+		C76EEE662549B68100DB16A3 /* ABWheelPickerModifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C76EEE642549B68100DB16A3 /* ABWheelPickerModifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C76EEEA22549BC4C00DB16A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C76EEEA12549BC4C00DB16A3 /* Assets.xcassets */; };
+		C76EEEA52549BC6900DB16A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C76EEEA42549BC6900DB16A3 /* Assets.xcassets */; };
+		C77205C2254972A000AAA005 /* ABWheelPickerModifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77205C1254972A000AAA005 /* ABWheelPickerModifier.framework */; };
+		C77205C3254972A000AAA005 /* ABWheelPickerModifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77205C1254972A000AAA005 /* ABWheelPickerModifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C77205D32549732D00AAA005 /* ABWheelPickerModifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77205D22549732D00AAA005 /* ABWheelPickerModifier.framework */; };
+		C77205D42549732D00AAA005 /* ABWheelPickerModifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77205D22549732D00AAA005 /* ABWheelPickerModifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7C962222549510400FDD015 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C962212549510400FDD015 /* ContentView.swift */; };
+		C7C962262549514700FDD015 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C962252549514700FDD015 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7239D40254962F900F5101D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C72292E12549331800A668D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7239D3D254962F900F5101D;
+			remoteInfo = "watchOS Extension";
+		};
+		C7239D4F254962FA00F5101D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C72292E12549331800A668D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7239D34254962F700F5101D;
+			remoteInfo = watchOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C7239D55254962FA00F5101D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C7239D3F254962F900F5101D /* ABWheelPickerModifierExample (watchOS Extension).appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C76EEE672549B68100DB16A3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C76EEE662549B68100DB16A3 /* ABWheelPickerModifier.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C77205C4254972A000AAA005 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C77205C3254972A000AAA005 /* ABWheelPickerModifier.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C77205D52549732D00AAA005 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C77205D42549732D00AAA005 /* ABWheelPickerModifier.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C783690225495DAD00E5CD8F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C7239D51254962FA00F5101D /* ABWheelPickerModifierExample (watchOS).app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C72292E62549331800A668D7 /* ABWheelPickerModifierExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABWheelPickerModifierExampleApp.swift; sourceTree = "<group>"; };
+		C72292E72549331800A668D7 /* WheelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPickerView.swift; sourceTree = "<group>"; };
+		C72292E82549331900A668D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C72292ED2549331900A668D7 /* ABWheelPickerModifierExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABWheelPickerModifierExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72292F02549331900A668D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C72292F52549331A00A668D7 /* ABWheelPickerModifierExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABWheelPickerModifierExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72292F72549331A00A668D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C72292F82549331A00A668D7 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C72293162549384400A668D7 /* ABWheelPickerModifierExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ABWheelPickerModifierExample.entitlements; sourceTree = "<group>"; };
+		C7239D35254962F700F5101D /* ABWheelPickerModifierExample (watchOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ABWheelPickerModifierExample (watchOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7239D37254962F900F5101D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7239D39254962F900F5101D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7239D3E254962F900F5101D /* ABWheelPickerModifierExample (watchOS Extension).appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ABWheelPickerModifierExample (watchOS Extension).appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7239D43254962F900F5101D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7239D45254962F900F5101D /* ABWheelPickerModifierExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABWheelPickerModifierExampleApp.swift; sourceTree = "<group>"; };
+		C7239D47254962F900F5101D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C7239D49254962FA00F5101D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7239D4C254962FA00F5101D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7239D4E254962FA00F5101D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C76EEE642549B68100DB16A3 /* ABWheelPickerModifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ABWheelPickerModifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C76EEEA12549BC4C00DB16A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C76EEEA42549BC6900DB16A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C77205C1254972A000AAA005 /* ABWheelPickerModifier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ABWheelPickerModifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77205D22549732D00AAA005 /* ABWheelPickerModifier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ABWheelPickerModifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C962212549510400FDD015 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7C962252549514700FDD015 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C72292EA2549331900A668D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C77205C2254972A000AAA005 /* ABWheelPickerModifier.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72292F22549331A00A668D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C77205D32549732D00AAA005 /* ABWheelPickerModifier.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7239D3B254962F900F5101D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C76EEE652549B68100DB16A3 /* ABWheelPickerModifier.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C72292E02549331800A668D7 = {
+			isa = PBXGroup;
+			children = (
+				C72293162549384400A668D7 /* ABWheelPickerModifierExample.entitlements */,
+				C72292E52549331800A668D7 /* Shared */,
+				C72292EF2549331900A668D7 /* iOS */,
+				C72292F62549331A00A668D7 /* macOS */,
+				C7239D36254962F700F5101D /* watchOS */,
+				C7239D42254962F900F5101D /* watchOS Extension */,
+				C72292EE2549331900A668D7 /* Products */,
+				C722930B2549343C00A668D7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C72292E52549331800A668D7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C72292E62549331800A668D7 /* ABWheelPickerModifierExampleApp.swift */,
+				C72292E72549331800A668D7 /* WheelPickerView.swift */,
+				C72292E82549331900A668D7 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C72292EE2549331900A668D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C72292ED2549331900A668D7 /* ABWheelPickerModifierExample.app */,
+				C72292F52549331A00A668D7 /* ABWheelPickerModifierExample.app */,
+				C7239D35254962F700F5101D /* ABWheelPickerModifierExample (watchOS).app */,
+				C7239D3E254962F900F5101D /* ABWheelPickerModifierExample (watchOS Extension).appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C72292EF2549331900A668D7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C72292F02549331900A668D7 /* Info.plist */,
+				C7C962212549510400FDD015 /* ContentView.swift */,
+				C76EEEA12549BC4C00DB16A3 /* Assets.xcassets */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		C72292F62549331A00A668D7 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C72292F72549331A00A668D7 /* Info.plist */,
+				C72292F82549331A00A668D7 /* macOS.entitlements */,
+				C7C962252549514700FDD015 /* ContentView.swift */,
+				C76EEEA42549BC6900DB16A3 /* Assets.xcassets */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		C722930B2549343C00A668D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C76EEE642549B68100DB16A3 /* ABWheelPickerModifier.framework */,
+				C77205D22549732D00AAA005 /* ABWheelPickerModifier.framework */,
+				C77205C1254972A000AAA005 /* ABWheelPickerModifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7239D36254962F700F5101D /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				C7239D37254962F900F5101D /* Assets.xcassets */,
+				C7239D39254962F900F5101D /* Info.plist */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		C7239D42254962F900F5101D /* watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C7239D43254962F900F5101D /* ContentView.swift */,
+				C7239D45254962F900F5101D /* ABWheelPickerModifierExampleApp.swift */,
+				C7239D47254962F900F5101D /* ComplicationController.swift */,
+				C7239D49254962FA00F5101D /* Assets.xcassets */,
+				C7239D4E254962FA00F5101D /* Info.plist */,
+				C7239D4B254962FA00F5101D /* Preview Content */,
+			);
+			path = "watchOS Extension";
+			sourceTree = "<group>";
+		};
+		C7239D4B254962FA00F5101D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C7239D4C254962FA00F5101D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C72292EC2549331900A668D7 /* ABWheelPickerModifierExample (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C72293012549331A00A668D7 /* Build configuration list for PBXNativeTarget "ABWheelPickerModifierExample (iOS)" */;
+			buildPhases = (
+				C72292E92549331900A668D7 /* Sources */,
+				C72292EA2549331900A668D7 /* Frameworks */,
+				C72292EB2549331900A668D7 /* Resources */,
+				C783690225495DAD00E5CD8F /* Embed Watch Content */,
+				C77205C4254972A000AAA005 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7239D50254962FA00F5101D /* PBXTargetDependency */,
+			);
+			name = "ABWheelPickerModifierExample (iOS)";
+			productName = "ABWheelPickerModifierExample (iOS)";
+			productReference = C72292ED2549331900A668D7 /* ABWheelPickerModifierExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C72292F42549331A00A668D7 /* ABWheelPickerModifierExample (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C72293042549331A00A668D7 /* Build configuration list for PBXNativeTarget "ABWheelPickerModifierExample (macOS)" */;
+			buildPhases = (
+				C72292F12549331A00A668D7 /* Sources */,
+				C72292F22549331A00A668D7 /* Frameworks */,
+				C72292F32549331A00A668D7 /* Resources */,
+				C77205D52549732D00AAA005 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ABWheelPickerModifierExample (macOS)";
+			productName = "ABWheelPickerModifierExample (macOS)";
+			productReference = C72292F52549331A00A668D7 /* ABWheelPickerModifierExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7239D34254962F700F5101D /* ABWheelPickerModifierExample (watchOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7239D56254962FA00F5101D /* Build configuration list for PBXNativeTarget "ABWheelPickerModifierExample (watchOS)" */;
+			buildPhases = (
+				C7239D33254962F700F5101D /* Resources */,
+				C7239D55254962FA00F5101D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7239D41254962F900F5101D /* PBXTargetDependency */,
+			);
+			name = "ABWheelPickerModifierExample (watchOS)";
+			productName = watchOS;
+			productReference = C7239D35254962F700F5101D /* ABWheelPickerModifierExample (watchOS).app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C7239D3D254962F900F5101D /* ABWheelPickerModifierExample (watchOS Extension) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7239D52254962FA00F5101D /* Build configuration list for PBXNativeTarget "ABWheelPickerModifierExample (watchOS Extension)" */;
+			buildPhases = (
+				C7239D3A254962F900F5101D /* Sources */,
+				C7239D3B254962F900F5101D /* Frameworks */,
+				C7239D3C254962F900F5101D /* Resources */,
+				C76EEE672549B68100DB16A3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ABWheelPickerModifierExample (watchOS Extension)";
+			productName = "watchOS Extension";
+			productReference = C7239D3E254962F900F5101D /* ABWheelPickerModifierExample (watchOS Extension).appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C72292E12549331800A668D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					C72292EC2549331900A668D7 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					C72292F42549331A00A668D7 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					C7239D34254962F700F5101D = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					C7239D3D254962F900F5101D = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = C72292E42549331800A668D7 /* Build configuration list for PBXProject "ABWheelPickerModifierExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C72292E02549331800A668D7;
+			productRefGroup = C72292EE2549331900A668D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C72292EC2549331900A668D7 /* ABWheelPickerModifierExample (iOS) */,
+				C72292F42549331A00A668D7 /* ABWheelPickerModifierExample (macOS) */,
+				C7239D34254962F700F5101D /* ABWheelPickerModifierExample (watchOS) */,
+				C7239D3D254962F900F5101D /* ABWheelPickerModifierExample (watchOS Extension) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C72292EB2549331900A668D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C76EEEA22549BC4C00DB16A3 /* Assets.xcassets in Resources */,
+				C72292FD2549331A00A668D7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72292F32549331A00A668D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C76EEEA52549BC6900DB16A3 /* Assets.xcassets in Resources */,
+				C72292FE2549331A00A668D7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7239D33254962F700F5101D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7239D38254962F900F5101D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7239D3C254962F900F5101D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7239D4D254962FA00F5101D /* Preview Assets.xcassets in Resources */,
+				C7239D4A254962FA00F5101D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C72292E92549331900A668D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72292FB2549331A00A668D7 /* WheelPickerView.swift in Sources */,
+				C72292F92549331A00A668D7 /* ABWheelPickerModifierExampleApp.swift in Sources */,
+				C7C962222549510400FDD015 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72292F12549331A00A668D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72292FC2549331A00A668D7 /* WheelPickerView.swift in Sources */,
+				C72292FA2549331A00A668D7 /* ABWheelPickerModifierExampleApp.swift in Sources */,
+				C7C962262549514700FDD015 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7239D3A254962F900F5101D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7239D46254962F900F5101D /* ABWheelPickerModifierExampleApp.swift in Sources */,
+				C7239D44254962F900F5101D /* ContentView.swift in Sources */,
+				C7239D622549634900F5101D /* WheelPickerView.swift in Sources */,
+				C7239D48254962F900F5101D /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7239D41254962F900F5101D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7239D3D254962F900F5101D /* ABWheelPickerModifierExample (watchOS Extension) */;
+			targetProxy = C7239D40254962F900F5101D /* PBXContainerItemProxy */;
+		};
+		C7239D50254962FA00F5101D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = C7239D34254962F700F5101D /* ABWheelPickerModifierExample (watchOS) */;
+			targetProxy = C7239D4F254962FA00F5101D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C72292FF2549331A00A668D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C72293002549331A00A668D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C72293022549331A00A668D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ABWheelPickerModifierExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 292J49Y2B4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = io.aben.ABWheelPickerModifierExample;
+				PRODUCT_NAME = ABWheelPickerModifierExample;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C72293032549331A00A668D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ABWheelPickerModifierExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 292J49Y2B4;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = io.aben.ABWheelPickerModifierExample;
+				PRODUCT_NAME = ABWheelPickerModifierExample;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C72293052549331A00A668D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 292J49Y2B4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = io.aben.ABWheelPickerModifierExample;
+				PRODUCT_NAME = ABWheelPickerModifierExample;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C72293062549331A00A668D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 292J49Y2B4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = io.aben.ABWheelPickerModifierExample;
+				PRODUCT_NAME = ABWheelPickerModifierExample;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C7239D53254962FA00F5101D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 292J49Y2B4;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = io.aben.ABWheelPickerModifierExample.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				REEXPORTED_FRAMEWORK_NAMES = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		C7239D54254962FA00F5101D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 292J49Y2B4;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
+				INFOPLIST_FILE = "watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = io.aben.ABWheelPickerModifierExample.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				REEXPORTED_FRAMEWORK_NAMES = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		C7239D57254962FA00F5101D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 292J49Y2B4;
+				IBSC_MODULE = watchOS_Extension;
+				INFOPLIST_FILE = watchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = io.aben.ABWheelPickerModifierExample.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		C7239D58254962FA00F5101D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 292J49Y2B4;
+				IBSC_MODULE = watchOS_Extension;
+				INFOPLIST_FILE = watchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = io.aben.ABWheelPickerModifierExample.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C72292E42549331800A668D7 /* Build configuration list for PBXProject "ABWheelPickerModifierExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72292FF2549331A00A668D7 /* Debug */,
+				C72293002549331A00A668D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C72293012549331A00A668D7 /* Build configuration list for PBXNativeTarget "ABWheelPickerModifierExample (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72293022549331A00A668D7 /* Debug */,
+				C72293032549331A00A668D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C72293042549331A00A668D7 /* Build configuration list for PBXNativeTarget "ABWheelPickerModifierExample (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72293052549331A00A668D7 /* Debug */,
+				C72293062549331A00A668D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7239D52254962FA00F5101D /* Build configuration list for PBXNativeTarget "ABWheelPickerModifierExample (watchOS Extension)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7239D53254962FA00F5101D /* Debug */,
+				C7239D54254962FA00F5101D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7239D56254962FA00F5101D /* Build configuration list for PBXNativeTarget "ABWheelPickerModifierExample (watchOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7239D57254962FA00F5101D /* Debug */,
+				C7239D58254962FA00F5101D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C72292E12549331800A668D7 /* Project object */;
+}
