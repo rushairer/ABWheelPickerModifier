@@ -22,7 +22,7 @@ struct WheelPickerView: View {
     var body: some View {
         func internalView(geometry: GeometryProxy) -> some View {
             return VStack(spacing: 20) {
-                Text("\(self.wheelPickerModifierData.value)")
+                Text("\(Int(self.wheelPickerModifierData.value))")
                 ZStack {
                     ZStack {
                         Circle()
@@ -37,7 +37,7 @@ struct WheelPickerView: View {
                             )
                             .offset(x: geometry.size.width * 0.36, y: 0)
                     }
-                    .accentColor(Color.white.opacity(Double(CGFloat(self.wheelPickerModifierData.value)/CGFloat(self.wheelPickerModifierData.maximumValue))))
+                    .accentColor(Color.blue.opacity(Double(self.wheelPickerModifierData.value/CGFloat(self.wheelPickerModifierData.maximumValue))))
                     .scaleEffect(self.isActive ? 1.2 : 1)
                     .modifier(ABWheelPickerModifier(wheelPickerModifierData,
                                                     dragGestureOnChanged: { _ in

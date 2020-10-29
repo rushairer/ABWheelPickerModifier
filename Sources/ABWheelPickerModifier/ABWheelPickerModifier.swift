@@ -12,17 +12,30 @@ import SwiftUI
 @available(watchOS 6.0, *)
 
 public class ABWheelPickerModifierData: ObservableObject {
-    @Published public fileprivate(set) var value: Int = 0
+    
+    /// The value of the wheel.
+    @Published public fileprivate(set) var value: CGFloat = 0
+    
+    /// The minimum value of the wheel.
     @Published public var minimumValue: Int = 0
+    
+    /// The maximum value of the wheel.
     @Published public var maximumValue: Int = 360
+    
+    /// The step value must be between 0 and 60.
+    @Published public var step: CGFloat = 0 {
+        didSet {
+            assert(step <= 60 && step >= 0, "The step value must be between 0 and 60.")
+        }
+    }
 
     @Published fileprivate(set) var realAngle: CGFloat = 0
     @Published fileprivate(set) var lastAngle: CGFloat = 0
     @Published fileprivate(set) var lastPoint: CGPoint = CGPoint.zero
     
-    private var initValue: Int = 0
+    private var initValue: CGFloat = 0
     
-    public init(initValue:Int = 0) {
+    public init(initValue:CGFloat = 0) {
         self.initValue = initValue
         self.reset()
     }
@@ -59,7 +72,6 @@ public struct ABWheelPickerModifier: ViewModifier {
     
     @State private var direction: Direction = .none
     @State private var lastDirection: Direction = .none
-
     @State private var pauseDragging = false
     
     public var dragGestureOnChanged: ((DragGesture.Value) -> Void)?
@@ -84,7 +96,7 @@ public struct ABWheelPickerModifier: ViewModifier {
         func internalView(geometry: GeometryProxy) -> some View {
             let dragGesture = DragGesture(minimumDistance: 0, coordinateSpace: .local)
                 .onChanged{ value in
-                    assert(self.data.value >= self.data.minimumValue && self.data.value <= self.data.maximumValue, "The value must be between minimumValue and maximumValue.")
+                    assert(self.data.value >= CGFloat(self.data.minimumValue) && self.data.value <= CGFloat(self.data.maximumValue), "The value must be between minimumValue and maximumValue.")
                     
                     guard !self.pauseDragging else { return }
 
@@ -104,25 +116,36 @@ public struct ABWheelPickerModifier: ViewModifier {
                         offsetTheta -= 360
                     }
                     
-                    let virtualAngle = CGFloat(self.data.value) + offsetTheta
+                    guard offsetTheta > self.data.step || offsetTheta < -self.data.step else { return }
+                    if self.data.step != 0 {
+                        offsetTheta = offsetTheta - offsetTheta.truncatingRemainder(dividingBy: self.data.step)
+                    }
+                    
+                    let virtualAngle = self.data.value + offsetTheta
                     
                     if virtualAngle > CGFloat(self.data.maximumValue) {
                         if self.maximumValueOnChanged != nil {
                             self.maximumValueOnChanged!(value)
                         }
-                        self.data.value = self.data.maximumValue
-                        self.data.realAngle = CGFloat(self.data.value)
+                        self.data.value = CGFloat(self.data.maximumValue)
+                        self.data.realAngle = self.data.value
                         self.pauseDragging = true
                     } else if virtualAngle < CGFloat(self.data.minimumValue) {
                         if self.minimumValueOnChanged != nil {
                             self.minimumValueOnChanged!(value)
                         }
-                        self.data.value = self.data.minimumValue
-                        self.data.realAngle = CGFloat(self.data.value)
+                        self.data.value = CGFloat(self.data.minimumValue)
+                        self.data.realAngle = self.data.value
                         self.pauseDragging = true
                     } else {
-                        self.data.value += Int(offsetTheta)
-                        self.data.realAngle = round(theta + self.data.lastAngle)
+                        self.data.value += offsetTheta
+                        
+                        if self.data.step == 0 {
+                            self.data.realAngle = round(theta + self.data.lastAngle)
+                        } else {
+                            self.data.realAngle = self.data.value
+                        }
+                        
                         self.data.lastPoint = value.location
                         
                         if self.dragGestureOnChanged != nil {
