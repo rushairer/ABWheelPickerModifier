@@ -6,7 +6,7 @@ final class ABWheelPickerModifierTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(ABWheelPickerModifier().text, "Hello, World!")
+        //XCTAssertEqual(ABWheelPickerModifier().text, "Hello, World!")
     }
 
     static var allTests = [
