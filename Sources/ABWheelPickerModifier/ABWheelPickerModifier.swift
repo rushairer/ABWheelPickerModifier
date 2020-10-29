@@ -82,24 +82,24 @@ public struct ABWheelPickerModifier: ViewModifier {
                     
                     var theta = (atan2(value.location.x - geometry.size.width / 2, geometry.size.width / 2 - value.location.y) - atan2(value.startLocation.x - geometry.size.width / 2, geometry.size.width / 2 - value.startLocation.y)) * 180 / .pi
                     
-                    let redictedTheta = (atan2(value.predictedEndLocation.x - geometry.size.width / 2, geometry.size.width / 2 - value.predictedEndLocation.y) - atan2(value.location.x - geometry.size.width / 2, geometry.size.width / 2 - value.location.y)) * 180 / .pi
+                    let predictedTheta = (atan2(value.predictedEndLocation.x - geometry.size.width / 2, geometry.size.width / 2 - value.predictedEndLocation.y) - atan2(value.location.x - geometry.size.width / 2, geometry.size.width / 2 - value.location.y)) * 180 / .pi
                     
                     if theta < 0 { theta += 360  }
                     
                     let fixedTheta = (self.data.lastAngle + theta).truncatingRemainder(dividingBy: 360.0)
                     let mod = self.data.realAngle.truncatingRemainder(dividingBy: 360.0)
                     
-                    var roundedNumberVariation: CGFloat = 0
+                    //var roundedNumberVariation: CGFloat = 0
                     
-                    if redictedTheta > 0 && redictedTheta < 100 ||  redictedTheta < -300{
+                    if predictedTheta > 0 && predictedTheta < 100 ||  predictedTheta < -300{
                         if mod >= 300 && mod <= 360 && fixedTheta >= 0 && fixedTheta <= 60 {
                             self.data.roundedNumber += 1
-                            roundedNumberVariation = 1
+                            //roundedNumberVariation = 1
                         }
-                    } else if redictedTheta < 0 && redictedTheta > -100 || redictedTheta > 300 {
+                    } else if predictedTheta < 0 && predictedTheta > -100 || predictedTheta > 300 {
                         if fixedTheta >= 300 && fixedTheta <= 360 && mod >= 0 && mod <= 60 {
                             self.data.roundedNumber -= 1
-                            roundedNumberVariation = -1
+                            //roundedNumberVariation = -1
                         }
                     }
                     
