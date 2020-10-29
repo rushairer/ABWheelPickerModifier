@@ -22,7 +22,7 @@ struct WheelPickerView: View {
     var body: some View {
         func internalView(geometry: GeometryProxy) -> some View {
             return VStack(spacing: 20) {
-                Text("\(self.wheelPickerModifierData.displayAngle)")
+                Text("\(Int(self.wheelPickerModifierData.value))")
                 ZStack {
                     ZStack {
                         Circle()
@@ -37,49 +37,51 @@ struct WheelPickerView: View {
                             )
                             .offset(x: geometry.size.width * 0.36, y: 0)
                     }
-                    
+                    .accentColor(Color.blue.opacity(Double(self.wheelPickerModifierData.value/CGFloat(self.wheelPickerModifierData.maximumValue))))
                     .scaleEffect(self.isActive ? 1.2 : 1)
                     .modifier(ABWheelPickerModifier(wheelPickerModifierData,
-                                                    longPressGestureOnChanged: { _ in
-                                                        
+                                                    dragGestureOnChanged: { _ in
                                                         withAnimation {
                                                             self.isActive = true
                                                         }
-                                                    }, longPressGestureOnEnded: { _ in
-                                                        
-                                                        withAnimation {
-                                                            self.isActive = false
-                                                        }
-                                                    }, dragGestureOnChanged: { _ in
-                                                        withAnimation {
-                                                            self.isActive = true
-                                                        }
-                                                        
                                                     }, dragGestureOnEnded: { _ in
                                                         withAnimation {
                                                             self.isActive = false
                                                         }
-                                                        
+                                                    }, minimumValueOnChanged: { _ in
+                                                        #if os(iOS)
+                                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                                        #endif
+                                                        withAnimation {
+                                                            self.isActive = false
+                                                        }
+                                                    }, maximumValueOnChanged: { _ in
+                                                        #if os(iOS)
+                                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                                        #endif
+                                                        withAnimation {
+                                                            self.isActive = false
+                                                        }
                                                     }))
                     .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)
                     
                     Circle()
                         .fill(Color.accentColor.opacity(0.8))
                         .frame(width: geometry.size.width * 0.45, height: geometry.size.width * 0.45, alignment: .center)
-                        .onTapGesture(count: 2) {
-                            self.wheelPickerModifierData.reset()
-                            self.isActive = false
-                            #if os(iOS)
-                            
-                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                            #endif
-                        }
+                        .highPriorityGesture(TapGesture(count: 2)
+                                                .onEnded { value in
+                                                    self.wheelPickerModifierData.reset()
+                                                    self.isActive = false
+                                                    #if os(iOS)
+                                                    UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                                                    #endif
+                                                }, including: .gesture)
                 }
             }
             .shadow(color: Color.black.opacity(0.25),
-                     radius: 10,
-                     x: 0,
-                     y: 5)
+                    radius: 10,
+                    x: 0,
+                    y: 5)
         }
         return GeometryReader(content: internalView(geometry:))
     }
