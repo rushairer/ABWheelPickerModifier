@@ -83,13 +83,13 @@ struct WheelPickerView: View {
                     x: 0,
                     y: 5)
         }
-        return GeometryReader(content: internalView(geometry:))
+        return GeometryReader(content: internalView(geometry:)).scaledToFit()
     }
 }
 
 struct WheelPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        WheelPickerView()
+        WheelPickerView(wheelPickerModifierData: ABWheelPickerModifierData(initValue: 50))
             .padding(100)
             .accentColor(.pink)
     }
