@@ -169,6 +169,6 @@ public struct ABWheelPickerModifier: ViewModifier {
                 .gesture(dragGesture)
         }
         
-        return GeometryReader(content: internalView(geometry:))
+        return GeometryReader(content: internalView(geometry:)).scaledToFit()
     }
 }
