@@ -35,7 +35,14 @@ public class ABWheelPickerModifierData: ObservableObject {
     
     private var initValue: CGFloat = 0
     
+    public init() {}
+    
     public init(initValue:CGFloat = 0) {
+        self.initValue = initValue
+        self.reset()
+    }
+    
+    public func setupInitValue(initValue:CGFloat) {
         self.initValue = initValue
         self.reset()
     }
