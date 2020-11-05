@@ -37,7 +37,7 @@ struct WheelPickerView: View {
                             )
                             .offset(x: geometry.size.width * 0.36, y: 0)
                     }
-                    .accentColor(Color.blue.opacity(Double(self.wheelPickerModifierData.value/CGFloat(self.wheelPickerModifierData.maximumValue))))
+                    .accentColor(Color.white.opacity(Double(self.wheelPickerModifierData.value/CGFloat(self.wheelPickerModifierData.maximumValue))))
                     .scaleEffect(self.isActive ? 1.2 : 1)
                     .modifier(ABWheelPickerModifier(wheelPickerModifierData,
                                                     dragGestureOnChanged: { _ in
@@ -50,14 +50,14 @@ struct WheelPickerView: View {
                                                         }
                                                     }, minimumValueOnChanged: { _ in
                                                         #if os(iOS)
-                                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                                                         #endif
                                                         withAnimation {
                                                             self.isActive = false
                                                         }
                                                     }, maximumValueOnChanged: { _ in
                                                         #if os(iOS)
-                                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                                                         #endif
                                                         withAnimation {
                                                             self.isActive = false
