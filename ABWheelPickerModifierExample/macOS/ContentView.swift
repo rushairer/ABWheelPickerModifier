@@ -6,18 +6,29 @@
 //
 
 import SwiftUI
+import ABWheelPickerModifier
 
 struct ContentView: View {
+    var wheelPickerModifierData = ABWheelPickerModifierData(initValue: 320)
+    
     var body: some View {
-        HStack(spacing: 40) {
-            WheelPickerView()
-                .frame(width: 100, height: 100, alignment: .center)
+        self.wheelPickerModifierData.minimumValue = 30
+        self.wheelPickerModifierData.maximumValue = 7500
+        self.wheelPickerModifierData.step = 30
+        return HStack(spacing: 80) {
+            Image(systemName: "timelapse")
+                .resizable()
+                .modifier(ABWheelPickerModifier(ABWheelPickerModifierData().setRange(-3600, 3600), dragGestureOnChanged: { _ in
+                }))
+                .frame(width: 80, height: 80, alignment: .center)
+
+            WheelPickerView(wheelPickerModifierData: self.wheelPickerModifierData)
+                .frame(width: 180, height: 180, alignment: .center)
+                .padding()
 
             WheelPickerView()
-                .frame(width: 100, height: 100, alignment: .center)
-
+                .frame(width: 120, height: 120, alignment: .center)
         }
-        .frame(width: 800, height: 600, alignment: .center)
     }
 }
 

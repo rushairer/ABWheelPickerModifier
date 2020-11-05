@@ -79,8 +79,9 @@ public struct ABWheelPickerModifier: ViewModifier {
     
     @State private var direction: Direction = .none
     @State private var lastDirection: Direction = .none
-    @State private var pauseDragging = false
-    
+    @State private var pauseDragging: Bool = false
+    @State private var tempValue: CGFloat = 0
+
     public var dragGestureOnChanged: ((DragGesture.Value) -> Void)?
     public var dragGestureOnEnded: ((DragGesture.Value) -> Void)?
     public var minimumValueOnChanged: ((DragGesture.Value) -> Void)?
@@ -122,12 +123,7 @@ public struct ABWheelPickerModifier: ViewModifier {
                     if offsetTheta > 90 {
                         offsetTheta -= 360
                     }
-                    
-                    guard offsetTheta > self.data.step || offsetTheta < -self.data.step else { return }
-                    if self.data.step != 0 {
-                        offsetTheta = offsetTheta - offsetTheta.truncatingRemainder(dividingBy: self.data.step)
-                    }
-                    
+                                        
                     let virtualAngle = self.data.value + offsetTheta
                     
                     if virtualAngle > CGFloat(self.data.maximumValue) {
@@ -145,17 +141,39 @@ public struct ABWheelPickerModifier: ViewModifier {
                         self.data.realAngle = self.data.value
                         self.pauseDragging = true
                     } else {
-                        self.data.value += offsetTheta
                         
+                        var callEvent = false
+
                         if self.data.step == 0 {
-                            self.data.realAngle = round(theta + self.data.lastAngle)
+                            self.data.value += offsetTheta
+                            callEvent = true
                         } else {
-                            self.data.realAngle = self.data.value
+                            self.tempValue += offsetTheta
+                            if abs(self.tempValue) > self.data.step {
+                                if self.tempValue > 0 {
+                                    self.data.value += self.data.step
+                                    self.tempValue -= self.data.step
+                                } else {
+                                    self.data.value -= self.data.step
+                                    self.tempValue += self.data.step
+                                }
+                                
+                                //fix value
+                                if (self.data.value < CGFloat(self.data.minimumValue)) {
+                                    self.data.value = CGFloat(self.data.minimumValue)
+                                } else if (self.data.value > CGFloat(self.data.maximumValue)) {
+                                    self.data.value = CGFloat(self.data.maximumValue)
+                                }
+                                
+                                callEvent = true
+                            }
                         }
                         
+                        self.data.realAngle = round(theta + self.data.lastAngle)
+
                         self.data.lastPoint = value.location
                         
-                        if self.dragGestureOnChanged != nil {
+                        if self.dragGestureOnChanged != nil && callEvent {
                             self.dragGestureOnChanged!(value)
                         }
                     }

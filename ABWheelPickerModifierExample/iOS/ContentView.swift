@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         self.wheelPickerModifierData.minimumValue = 30
         self.wheelPickerModifierData.maximumValue = 750
-        self.wheelPickerModifierData.step = 0
+        self.wheelPickerModifierData.step = 30
         return VStack(spacing: 80) {
             Image(systemName: "timelapse")
                 .resizable()
@@ -36,5 +36,13 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .accentColor(.white)
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(LinearGradient(
+                gradient: Gradient(colors: [Color.green.opacity(0.8), Color.blue.opacity(0.9)]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            ).edgesIgnoringSafeArea(.all))
     }
 }
