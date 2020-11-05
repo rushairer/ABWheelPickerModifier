@@ -150,13 +150,9 @@ public struct ABWheelPickerModifier: ViewModifier {
                         } else {
                             self.tempValue += offsetTheta
                             if abs(self.tempValue) > self.data.step {
-                                if self.tempValue > 0 {
-                                    self.data.value += self.data.step
-                                    self.tempValue -= self.data.step
-                                } else {
-                                    self.data.value -= self.data.step
-                                    self.tempValue += self.data.step
-                                }
+                                let offset = self.tempValue - self.tempValue.truncatingRemainder(dividingBy: self.data.step)
+                                self.data.value += offset
+                                self.tempValue -= offset
                                 
                                 //fix value
                                 if (self.data.value < CGFloat(self.data.minimumValue)) {
@@ -180,6 +176,8 @@ public struct ABWheelPickerModifier: ViewModifier {
                 }
                 .onEnded { value in
                     self.pauseDragging = false
+                    
+                    self.tempValue = 0
                     
                     self.data.lastAngle = self.data.realAngle
                     self.data.lastPoint = CGPoint.zero
