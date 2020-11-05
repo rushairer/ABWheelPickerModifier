@@ -12,9 +12,9 @@ struct ContentView: View {
     var wheelPickerModifierData = ABWheelPickerModifierData(initValue: 320)
     
     var body: some View {
-        self.wheelPickerModifierData.minimumValue = 30
-        self.wheelPickerModifierData.maximumValue = 750
-        self.wheelPickerModifierData.step = 30
+        self.wheelPickerModifierData.minimumValue = Int(30 * 5.5)
+        self.wheelPickerModifierData.maximumValue = Int(250 * 5.5)
+        self.wheelPickerModifierData.step = 5.5
         return VStack(spacing: 80) {
             Image(systemName: "timelapse")
                 .resizable()
